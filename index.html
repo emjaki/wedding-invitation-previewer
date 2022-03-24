@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation Planner</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">
+            <h1>Wedding Invitation Planner</h1> 
+        </header>
+
+        <div id="sub-head-1">
+            <h2>Your details</h2>
+        </div>
+        <div id="form">
+            <form method="" action="" class="client-details">
+
+                <label for="nameP1">Name (Person 1)</label><br>
+                <input type="text" id="nameP1">
+                <br>
+                
+                <label for="nameP2">Name (Person 2)</label><br>
+                <input type="text" id="nameP2">
+                <br>
+            
+                <label for="event-date-time">Event date and time</label><br>
+                <input type="datetime-local" id="event-date-time"><br>
+
+                <label for="location">Location</label><br>
+                <input type="text" id="location">
+                <br>
+            
+                <label for="reception">Reception details</label><br>
+                <input type="text" id="reception">
+                <br>
+            
+                <label for="rsvp">RSVP</label><br>
+                <input type="text" id="rsvp">
+            
+            </form> 
+        </div>
+
+        <div id="sub-head-2">
+            <h2>Preview</h2>
+        </div>
+        
+        <div id="img-1">
+
+            <img src="images-thumbnail/image 4fullHeart.png" alt="red-filled heart placed on antique-white background"  id="red-heart">
+            
+            <button class="simple-heart-1" onclick="option1()"></button>
+            <button class="simple-heart-2" onclick="option2()"></button> 
+
+            <img src="images-thumbnail/Frame 10frameWithHeart.png" alt="bold black border on left and bottom margin, small red-filled heart in bottom-right corner. Antique white background." id="bauhaus-heart" onhover>
+                        
+            <label for="bauhaus-heart-1"></label>
+            <button class="bauhaus-heart-1" onclick = "option3()"></button>
+            <label for="bauhaus-heart-2"></label>
+            <button class="bauhaus-heart-2" onclick = "option4()"></button>
+
+            <img src="images-thumbnail/image 4rainbowHeart.png" alt="striped rainbow background with black outlined heart overlaying colour block" id="rainbow-heart">
+                       
+            <button class="rainbow-heart-1" onclick = "option5()"></button>
+            <button class="rainbow-heart-2" onclick = "option6()"></button>
+            
+        </div>
+
+        <div id="preview">
+            <p id="name-1-output"></p>
+            <p id="name-2-output"></p>
+            <p id="event-time-date-output"></p>
+            <p id="location-output"></p>
+            <p id="reception-output"></p>
+            <p id="rsvp-output"></p>
+        </div>
+
+        
+        <footer>
+
+        </footer>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
