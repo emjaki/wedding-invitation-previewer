@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: .2rem auto;
+    padding: .5rem;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1.3fr .4fr 1.3fr;
+    grid-template-rows: .8fr .5fr .6fr .1fr .6fr .1fr .6fr .1fr .6fr;
+    height: 100vh;
+   
+    grid-gap: 0.3rem;
+    text-align: center;
+    grid-template-areas: 
+    "header header header"
+    "sub-head-1 . sub-head-2"
+    "form design-1 preview"
+    "form design-1-btns preview"
+    "form design-2 preview"
+    "form design-2-btns preview"
+    "form design-3 preview"
+    "form design-3-btns preview"
+    "footer footer footer";
+}
+
+/*grid areas*/
+
+#header {
+    grid-area: header;
+    margin: 2rem;
+}
+
+#sub-head-1 {
+    grid-area: sub-head-1;
+    margin: 0;
+}
+
+#sub-head-2 {
+    grid-area: sub-head-2;
+}
+
+#design-1 {
+    grid-area: design-1;
+}
+
+#preview-wrapper {
+    grid-area: preview;
+}
+
+#design-1-btns {
+    grid-area: design-1-btns;
+}
+
+#design-2 {
+    grid-area: design-2;
+}
+
+#design-2-btns {
+    grid-area: design-2-btns;
+}
+
+#design-3 {
+    grid-area: design-3;
+}
+
+#design-3-btns {
+    grid-area: design-3-btns;
+}
+
+#form {
+    grid-area: form;
+    justify-items: center;
+    align-items: center;
+    margin: 15px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: black;
+}
+
+label {
+    visibility: hidden;
+}
+
+/*header*/
+span {
+    padding: 0 40px 0 40px;
+}
+
+h1 {
+    display: inline;
+    margin: .4rem;
+}
+
+/*remaining content*/
+
+h2 {
+    margin: .2rem .2rem .5rem .2rem;
+    font-size: 1.3rem;
+}
+
+/*#img-1 p, #img-2 p, #img-3 p {
+    margin: 0.3rem;
+}*/
+
+#option-2,
+#option-4,
+#option-6 {
+   display: none;
+}
+
+#design-1 img:hover, 
+#design-2 img:hover, 
+#design-3 img:hover {
+   transform: scale(1.1);
+}
+
+/*button styling*/
+button {
+    height:10px;
+    width: 10px;
+    border-radius: 45%;
+    display: inline;
+    margin: .5rem 0 .5rem 0;
+}
+
+.simple-heart-1 {
+    background-color: #EF3939;
+    border: 1px #EF3939 solid;
+}
+
+.simple-heart-2 {
+    background-color: #F9F4EC;
+    border: 1px #EF3939 solid;
+}
+
+.bauhaus-heart-1 {
+    background-color: #EF3939;
+    border: 1px black solid;
+}
+
+.bauhaus-heart-2 {
+    background-color: black;
+    border: 1px #EF3939 solid;
+}
+
+.rainbow-heart-1 {
+    background: linear-gradient(180deg, rgba(255, 186, 186, 0.8) 0%, #C292FF 100%);
+    border: 0.395458px solid #000000;
+}
+
+.rainbow-heart-2 {
+    background: linear-gradient(180deg, #F8B363 0%, #FFBABA 100%);
+    border: 0.395458px solid #EF3939;
+}
+
+/*form input styling*/
+
+input[type='text'] {
+    width: 80%;
+    margin: .2rem .2rem 1rem .2rem;
+    padding: .3rem;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    font-size: 1rem;
+}
+
+/*preview canvas and text output*/
+
+
+
+#invite-text {
+    margin: 50px 90px 50px 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+#name-1-output, 
+#prefilled-text-1, 
+#name-2-output, 
+#prefilled-text-3, 
+#time-output, 
+#date-output {
+    display: inline;
+    margin: 0;
+    padding: .5rem .1rem .5rem .1rem;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#prefilled-text-2,
+#location-output,
+#reception-output
+#reception-output,
+#rsvp-output {
+    margin: 0;
+    padding: .5rem .1rem .3rem .1rem;
+    max-width: 300px;
+    text-align: center;  
+}
+
+/*invite images*/
+
+.invite-option-1 {
+    background-image: url('images-main/Frame 1fullHeart.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    font-family: cursive;
+}
+
+.invite-option-2 {
+    background-image: url('images-main/Group 12outlineHeart.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.invite-option-3 {
+    background-image: url('images-main/Frame 2bauhausHeartRed.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    
+}
+
+.invite-option-4 {
+    background-image: url('images-main/Frame 5bauhausHeartBlack.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.invite-option-5 {
+    background-image: url('images-main/Frame 3rainbowHeart.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.invite-option-6 {
+    background-image: url('images-main/Frame 3rainbowHeart.png');
+    background-size: 370.96px 533px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* media queries phone */
+@media only screen and (max-width: 600px) {
+.wrapper {
+    width: 90%;
+    margin: .2rem auto;
+    padding: .5rem;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr .6fr .2fr .2fr 2.7fr .2fr 2.7fr .2fr;
+    
+    grid-gap: 0.3rem;
+    text-align: center;
+    grid-template-areas: 
+    "header header header"
+    "design-1 design-2 design-3"
+    "design-1-btns design-2-btns design-3-btns"
+    "sub-head-1 sub-head-1 sub-head-1"
+    "form form form"
+    "sub-head-2 sub-head-2 sub-head-2"
+    "preview preview preview"
+    "footer footer footer";
+}
+
+h2 {
+    margin: 1rem .2rem 1rem .2rem;
+    font-size: 1.4rem;
+}
+
+.invite-option-1 {
+    background-size: 80%; 
+}
+
+.invite-option-2 {
+    background-size: 80%;
+}
+
+.invite-option-3 {
+    background-size: 80%;
+}
+
+.invite-option-4 {
+    background-size: 80%;
+}
+
+.invite-option-5 {
+    background-size: 80%;
+}
+
+.invite-option-6 {
+    background-size: 80%;
+}
+
+::placeholder {
+    font-size: 1.3rem;
+    color: black;
+}
+
+
+}
+/*media queries large screen*/
+
+@media only screen and (min-width: 1300px) {
+    body {
+        background-color:#F9F4EC;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .wrapper {
+        width: 1400px;
+        padding: 5rem .5rem 5rem .5rem;
+        background-color: white;
+        grid-template-columns: 1.3fr .4fr 1.3fr;
+        grid-template-rows: .5fr .3fr .6fr .4fr .1fr .4fr .1fr .4fr .1fr .6fr .5fr;
+        grid-template-areas: 
+        "header header header"
+        "sub-head-1 . sub-head-2"
+        "form . preview"
+        "form design-1 preview"
+        "form design-1-btns preview"
+        "form design-2 preview"
+        "form design-2-btns preview"
+        "form design-3 preview"
+        "form design-3-btns preview"
+        "form . preview"
+        "footer footer footer";
+    }
+
+    #header {
+        margin: 2rem;
+    }
+
+    h2 {
+        margin: .2rem .2rem .5rem .2rem;
+        font-size: 1.5rem;
+    }
+
+    input[type='text'] {
+        margin: 1.5rem .2rem 1.5rem .2rem;
+    }
+
+    .invite-option-1 {
+        background-size: 480px 689.67px; 
+    }
+    .invite-option-2 {
+        background-size: 480px 689.67px;
+    }
+    
+    .invite-option-3 {
+        background-size: 480px 689.67px;
+    }
+    
+    .invite-option-4 {
+        background-size: 480px 689.67px;
+    }
+    
+    .invite-option-5 {
+        background-size: 480px 689.67px;
+    }
+    
+    .invite-option-6 {
+        background-size: 480px 689.67px;
+    }
+
+    div #invite-text {
+        width: 451px;
+        height: 648px;
+    }
+}
+

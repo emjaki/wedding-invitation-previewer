@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation Planner</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
@@ -23,26 +23,29 @@
             <form method="" action="" class="client-details">
 
                 <label for="nameP1">Name (Person 1)</label><br>
-                <input type="text" id="nameP1">
+                <input type="text" id="nameP1" placeholder="Name (Person 1)" onkeyup="livePrintP1()">
                 <br>
                 
                 <label for="nameP2">Name (Person 2)</label><br>
-                <input type="text" id="nameP2">
+                <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()">
                 <br>
             
-                <label for="event-date-time">Event date and time</label><br>
-                <input type="datetime-local" id="event-date-time"><br>
+                <label for="time">Event time</label><br>
+                <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()"><br>
+
+                <label for="date">Event date</label><br>
+                <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()"><br>
 
                 <label for="location">Location</label><br>
-                <input type="text" id="location">
+                <input type="text" id="location" placeholder="Location" onkeyup="livePrintLocation()">
                 <br>
             
                 <label for="reception">Reception details</label><br>
-                <input type="text" id="reception">
+                <input type="text" id="reception" placeholder = "Reception" onkeyup="livePrintReception()">
                 <br>
             
                 <label for="rsvp">RSVP</label><br>
-                <input type="text" id="rsvp">
+                <input type="text" id="rsvp" placeholder = "RSVP details" onkeyup="livePrintRsvp()">
             
             </form> 
         </div>
@@ -51,41 +54,61 @@
             <h2>Preview</h2>
         </div>
         
-        <div id="img-1">
+            <div id="design-1">
+                <img src="images-thumbnail/image 4fullHeart.png" alt="red-filled heart placed on antique-white background" id="option-1" onclick="showPreview('option-1')"/>
 
-            <img src="images-thumbnail/image 4fullHeart.png" alt="red-filled heart placed on antique-white background"  id="red-heart">
-            
-            <button class="simple-heart-1" onclick="option1()"></button>
-            <button class="simple-heart-2" onclick="option2()"></button> 
+                <img src="images-thumbnail/Group 13outlineHeart.png" alt="red outline of a heart against antique white background" id="option-2" onclick="showPreview('option-2')"/>
+            </div>
 
-            <img src="images-thumbnail/Frame 10frameWithHeart.png" alt="bold black border on left and bottom margin, small red-filled heart in bottom-right corner. Antique white background." id="bauhaus-heart" onhover>
-                        
-            <label for="bauhaus-heart-1"></label>
-            <button class="bauhaus-heart-1" onclick = "option3()"></button>
-            <label for="bauhaus-heart-2"></label>
-            <button class="bauhaus-heart-2" onclick = "option4()"></button>
+            <div id="design-1-btns">
+                <button class="simple-heart-1" onclick="option('option-1')"></button>
+                <button class="simple-heart-2" onclick="option('option-2')"></button> 
+            </div>
 
-            <img src="images-thumbnail/image 4rainbowHeart.png" alt="striped rainbow background with black outlined heart overlaying colour block" id="rainbow-heart">
-                       
-            <button class="rainbow-heart-1" onclick = "option5()"></button>
-            <button class="rainbow-heart-2" onclick = "option6()"></button>
-            
-        </div>
+            <div id="design-2">
+                <img src="images-thumbnail/Frame 10frameWithHeart.png" alt="bold black border on left and bottom margin, small red-filled heart in bottom-right corner. Antique white background." id="option-3" onclick="showPreview('option-3')"/>
 
-        <div id="preview">
-            <p id="name-1-output"></p>
-            <p id="name-2-output"></p>
-            <p id="event-time-date-output"></p>
-            <p id="location-output"></p>
-            <p id="reception-output"></p>
-            <p id="rsvp-output"></p>
-        </div>
+                <img src="images-thumbnail/Group 14redFrameHeart.png" alt="bold red border on left and bottom margin, small black-filled heart in bottom right corner. Antique white background." id="option-4" onclick="showPreview('option-4')"/>
+            </div>
 
+            <div id="design-2-btns">
+                <label for="bauhaus-heart-1" onclick="showPreviewOp3"></label>
+                <button class="bauhaus-heart-1" onclick = "option('option-3')"></button>
+                <label for="bauhaus-heart-2"></label>
+                <button class="bauhaus-heart-2" onclick = "option('option-4')"></button>
+            </div>
+
+            <div id="design-3">
+                <img src="images-thumbnail/rainbowHeart-thumbnail-1.png" alt="striped rainbow background with orange outlined heart overlaying colour block" id="option-5" onclick="showPreview('option-5')"/>
+
+                <img src="images-thumbnail/Frame 9pinkStripesHeart.png" alt="striped pink gradient bakcground with red outlined heart overlaying colour block" id="option-6" onclick="showPreview('option-6')"/>
+            </div>
+
+            <div id="design-3-btns">
+                <button class="rainbow-heart-1" onclick = "option('option-5')"></button>
+                <button class="rainbow-heart-2" onclick = "option('option-6')"></button>
+            </div>
+
+        <div id="empty"></div>
+
+        <div id="preview-wrapper" class="invite-option-1">
+            <div id="invite-text">
+                <p id="name-1-output"></p>
+                <p id="prefilled-text-1">&</p>
+                <p id="name-2-output"></p>
+                <p id="prefilled-text-2">Request the pleasure of your company at their wedding at</p>
+                <p id="time-output"></p>
+                <p id="prefilled-text-3">on</p>
+                <p id="date-output"></p>
+                <p id="prefilled-text-4">at</p>
+                <p id="location-output"></p>
+                <p id="reception-output"></p>
+                <p id="rsvp-output"></p>
+            </div>
+        </div> 
         
-        <footer>
-
-        </footer>
+        <footer></footer>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
