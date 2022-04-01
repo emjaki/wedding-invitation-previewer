@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -9,43 +8,51 @@ body {
 }
 
 .wrapper {
-    width: 90%;
+    width: 1000px;
+    max-height: 649px;
     margin: .2rem auto;
     padding: .5rem;
     background-color: white;
     display: grid;
-    grid-template-columns: 1.3fr .4fr 1.3fr;
-    grid-template-rows: .8fr .5fr .6fr .1fr .6fr .1fr .6fr .1fr .6fr;
-    height: 100vh;
-   
     grid-gap: 0.3rem;
     text-align: center;
+  
+    grid-template-columns: 1.3fr .4fr 1.3fr;
+    grid-template-rows: .5fr .4fr .3fr .1fr .4fr .1fr .4fr .1fr .4fr .1fr .1fr .1fr;
+   
+    
     grid-template-areas: 
     "header header header"
     "sub-head-1 . sub-head-2"
+    "form . preview"
     "form design-1 preview"
     "form design-1-btns preview"
     "form design-2 preview"
     "form design-2-btns preview"
     "form design-3 preview"
     "form design-3-btns preview"
+    "from . preview"
     "footer footer footer";
 }
+
 
 /*grid areas*/
 
 #header {
     grid-area: header;
     margin: 2rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 #sub-head-1 {
     grid-area: sub-head-1;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 #sub-head-2 {
     grid-area: sub-head-2;
+    font-family: 'Raleway', sans-serif;
 }
 
 #design-1 {
@@ -54,6 +61,7 @@ body {
 
 #preview-wrapper {
     grid-area: preview;
+    position: relative;
 }
 
 #design-1-btns {
@@ -76,29 +84,101 @@ body {
     grid-area: design-3-btns;
 }
 
+#design-1 img,
+#design-2 img,
+#design-3 img {
+    width:50%;
+}
+
 #form {
     grid-area: form;
     justify-items: center;
     align-items: center;
-    margin: 15px;
+    margin: 1rem;
+    font-family: 'Raleway', sans-serif;
 }
+
+/*design 1 font styles and layout*/
+#text-block-1 {
+    text-align: left;
+    margin-top: 3.1rem; 
+    margin-left: 5.6rem;
+    margin-right: 7.5rem;
+    font-size: 1.5rem;
+}
+
+#text-block-1 p,
+#text-block-2 p,
+#text-block-3 p,
+#text-block-4 p,
+#text-block-5 p,
+#text-block-6 p {
+    display: inline;
+    margin: 0;
+}
+
+#text-block-2,
+#text-block-3,
+#text-block-4,  
+#text-block-5 {
+    text-align: left;
+    margin-top: .1rem;
+    margin-left: 5.6rem;
+    margin-right: 8.43rem;
+    font-size: .9rem;
+}
+
+#text-block-6 {
+    position: absolute;
+    bottom: 3.5rem;
+    right: 5.6rem;
+    text-align: right;
+    font-size: .9rem;
+    margin-left: 9.3rem;
+}
+
+/*end design 1 font and text layout*/
+
+/*desing 2 font and text layout
+
+.design-2-text #text-block-1 {
+    display:hidden;
+    margin: '5.4rem 7.5rem 0 8.4rem';
+    font-size: '1.25 rem';  
+}
+
+.design-2-text #text-block-2,
+.design-2-text #text-block-5 {
+    display: hidden;
+    text-align: left;
+    margin: '.4rem 7.5rem 0 8.43rem';
+    font-size: .7rem;
+    font-style: italic;
+}
+
+.design-2-text #text-block-3,
+.design-2-text #text-block-4 {
+    display: hidden;
+    margin: .4rem 7.5rem 0 8.43rem;
+}
+
+.design-2-text #text-block-6  {
+    display: hidden;
+    margin: .4rem 7.5rem 0 8.43rem;
+    text-align: 'left';
+    position: 'initial';
+    font-size: .6rem;
+    font-style: italic;
+}
+*/
 
 footer {
     grid-area: footer;
 }
 
-::placeholder {
-    font-size: 1rem;
-    color: black;
-}
-
-label {
-    visibility: hidden;
-}
-
 /*header*/
 span {
-    padding: 0 40px 0 40px;
+    padding: 0 2.5rem 0 2.5rem;
 }
 
 h1 {
@@ -112,10 +192,6 @@ h2 {
     margin: .2rem .2rem .5rem .2rem;
     font-size: 1.3rem;
 }
-
-/*#img-1 p, #img-2 p, #img-3 p {
-    margin: 0.3rem;
-}*/
 
 #option-2,
 #option-4,
@@ -172,7 +248,7 @@ button {
 
 input[type='text'] {
     width: 80%;
-    margin: .2rem .2rem 1rem .2rem;
+    margin: .2rem;
     padding: .3rem;
     border-top-style: none;
     border-right-style: none;
@@ -181,95 +257,77 @@ input[type='text'] {
     font-size: 1rem;
 }
 
-/*preview canvas and text output*/
-
-
-
-#invite-text {
-    margin: 50px 90px 50px 90px;
-    align-items: center;
-    justify-content: center;
-}
-
-#name-1-output, 
-#prefilled-text-1, 
-#name-2-output, 
-#prefilled-text-3, 
-#time-output, 
-#date-output {
-    display: inline;
-    margin: 0;
-    padding: .5rem .1rem .5rem .1rem;
-    max-width: 300px;
-    text-align: center;
+::placeholder {
     font-size: 1rem;
+    color: rgb(145, 143, 143);
 }
 
-#prefilled-text-2,
-#location-output,
-#reception-output
-#reception-output,
-#rsvp-output {
-    margin: 0;
-    padding: .5rem .1rem .3rem .1rem;
-    max-width: 300px;
-    text-align: center;  
+label {
+    visibility: hidden;
 }
+
 
 /*invite images*/
 
 .invite-option-1 {
     background-image: url('images-main/Frame 1fullHeart.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
-    font-family: cursive;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .invite-option-2 {
     background-image: url('images-main/Group 12outlineHeart.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    
 }
 
 .invite-option-3 {
     background-image: url('images-main/Frame 2bauhausHeartRed.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
+    font-family: 'Rufina', serif;
+    
     
 }
 
 .invite-option-4 {
     background-image: url('images-main/Frame 5bauhausHeartBlack.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
+    font-family: 'Rufina', serif;
 }
 
 .invite-option-5 {
     background-image: url('images-main/Frame 3rainbowHeart.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
+    font-family: 'Baumans', cursive;
 }
 
 .invite-option-6 {
     background-image: url('images-main/Frame 6pinkGradientHeart.png');
-    background-size: 370.96px 533px;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
+    font-family: 'Baumans', cursive;
 }
 
-/* media queries phone */
-@media only screen and (max-width: 600px) {
+/* media queries small devices */
+@media only screen and (max-width: 800px) {
 .wrapper {
     width: 90%;
     margin: .2rem auto;
@@ -325,9 +383,8 @@ h2 {
     font-size: 1.3rem;
     color: black;
 }
-
-
 }
+
 /*media queries large screen*/
 
 @media only screen and (min-width: 1300px) {
@@ -337,7 +394,8 @@ h2 {
         margin-bottom: 20px;
     }
     .wrapper {
-        width: 1400px;
+        width: 87.5rem;
+        max-height: 100vh;
         padding: 5rem .5rem 5rem .5rem;
         background-color: white;
         grid-template-columns: 1.3fr .4fr 1.3fr;
@@ -361,7 +419,7 @@ h2 {
     }
 
     h2 {
-        margin: .2rem .2rem .5rem .2rem;
+        margin: .2rem;
         font-size: 1.5rem;
     }
 
@@ -370,31 +428,32 @@ h2 {
     }
 
     .invite-option-1 {
-        background-size: 480px 689.67px; 
+        background-size: 80%; 
     }
+    
     .invite-option-2 {
-        background-size: 480px 689.67px;
+        background-size: 80%;
     }
     
     .invite-option-3 {
-        background-size: 480px 689.67px;
+        background-size: 80%;
     }
     
     .invite-option-4 {
-        background-size: 480px 689.67px;
+        background-size: 80%;
     }
     
     .invite-option-5 {
-        background-size: 480px 689.67px;
+        background-size: 80%;
     }
     
     .invite-option-6 {
-        background-size: 480px 689.67px;
+        background-size: 80%;
     }
 
-    div #invite-text {
+   /* div #invite-text {
         width: 451px;
         height: 648px;
-    }
+    }*/
 }
 

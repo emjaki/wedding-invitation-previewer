@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Cormorant+Garamond:ital@1&family=Raleway&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -29,12 +29,12 @@
                 <label for="nameP2">Name (Person 2)</label><br>
                 <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()">
                 <br>
-            
-                <label for="time">Event time</label><br>
-                <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()"><br>
 
                 <label for="date">Event date</label><br>
                 <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()"><br>
+
+                <label for="time">Event time</label><br>
+                <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()"><br>
 
                 <label for="location">Location</label><br>
                 <input type="text" id="location" placeholder="Location" onkeyup="livePrintLocation()">
@@ -92,19 +92,35 @@
         <div id="empty"></div>
 
         <div id="preview-wrapper" class="invite-option-1">
-            <div id="invite-text">
+
+            <div id="text-block-1" class="">
                 <p id="name-1-output"></p>
                 <p id="prefilled-text-1">&</p>
                 <p id="name-2-output"></p>
-                <p id="prefilled-text-2">Request the pleasure of your company at their wedding at</p>
-                <p id="time-output"></p>
-                <p id="prefilled-text-3">on</p>
-                <p id="date-output"></p>
-                <p id="prefilled-text-4">at</p>
-                <p id="location-output"></p>
-                <p id="reception-output"></p>
-                <p id="rsvp-output"></p>
             </div>
+
+            <div id="text-block-2" class="">
+                <p id="prefilled-text-2">Request the pleasure of your company at their wedding on</p>
+            </div>
+            
+            <div id="text-block-3" class="">
+                <p id="date-output"></p><br>
+                <p id="prefilled-text-3">at</p>
+                <p id="time-output"></p>
+            </div>
+
+            <div id="text-block-4" class="">
+                <p id="location-output"></p>
+            </div>
+
+            <div id="text-block-5">
+                <p id="reception-output"></p>
+            </div>
+            
+            <div id="text-block-6" class="">
+                <p id="prefilled-text-4">RSVP by</p>
+                <p id="rsvp-output"></p>
+            </div>    
         </div> 
         
         <footer></footer>
