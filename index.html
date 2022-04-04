@@ -19,33 +19,56 @@
         <div id="sub-head-1">
             <h2>Your details</h2>
         </div>
+
         <div id="form">
-            <form method="" action="" class="client-details">
+            <form action="yourInvite.html" method="GET" class="client-details">
 
-                <label for="nameP1">Name (Person 1)</label><br>
-                <input type="text" id="nameP1" placeholder="Name (Person 1)" onkeyup="livePrintP1()">
-                <br>
+                <div class="form-control">
+                    <label for="nameP1">Name (Person 1)</label><br>
+                    <input type="text" id="nameP1" placeholder="Name (Person 1)" onkeyup="livePrintP1()" class="">
+                    <small>Error message</small>
+                </div>
                 
-                <label for="nameP2">Name (Person 2)</label><br>
-                <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()">
-                <br>
+                <div class="form-control">
+                    <label for="nameP2">Name (Person 2)</label><br>
+                    <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()" class="input">
+                    <small class="small">Error message</small>
+                </div>
 
-                <label for="date">Event date</label><br>
-                <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()"><br>
+                <div class="form-control">
+                    <label for="date">Event date</label><br>
+                    <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()">
+                    <small>Error message</small>
+                </div>
+                
+                <div class="form-control">
+                    <label for="time">Event time</label><br>
+                    <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()">
+                    <small>Error message</small>
+                </div>
+                
+                <div class="form-control">
+                    <label for="location">Location</label><br>
+                    <input type="text" id="location" placeholder="Location" onkeyup="livePrintLocation()">
+                    <small>Error message</small>
+                </div>
 
-                <label for="time">Event time</label><br>
-                <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()"><br>
-
-                <label for="location">Location</label><br>
-                <input type="text" id="location" placeholder="Location" onkeyup="livePrintLocation()">
-                <br>
+                <div class="form-control">
+                    <label for="reception">Reception details</label><br>
+                    <input type="text" id="reception" placeholder = "Reception" onkeyup="livePrintReception()">
+                    <small>Error message</small>
+                </div>
             
-                <label for="reception">Reception details</label><br>
-                <input type="text" id="reception" placeholder = "Reception" onkeyup="livePrintReception()">
-                <br>
-            
-                <label for="rsvp">RSVP</label><br>
-                <input type="text" id="rsvp" placeholder = "RSVP details" onkeyup="livePrintRsvp()">
+                <div class="form-control">
+                    <label for="rsvp">RSVP</label><br>
+                    <input type="text" id="rsvp" placeholder = "RSVP details" onkeyup="livePrintRsvp()">
+                    <small>Error message</small>
+                 </div>
+
+                <button type="reset" id="reset-btn" onclick="window.location.reload()">RESET</button>
+
+                <button type="submit" id="submit-btn">SUBMIT</button>
+
             
             </form> 
         </div>
@@ -93,34 +116,36 @@
 
         <div id="preview-wrapper" class="invite-option-1">
 
-            <div id="text-block-1" class="">
-                <p id="name-1-output"></p>
+            <div id="text-block-1">
+                <p id="name-1-output">Alex</p>
                 <p id="prefilled-text-1">&</p>
-                <p id="name-2-output"></p>
+                <p id="name-2-output">Sammy</p>
             </div>
 
-            <div id="text-block-2" class="">
+            <div id="text-block-2">
                 <p id="prefilled-text-2">Request the pleasure of your company at their wedding on</p>
             </div>
             
-            <div id="text-block-3" class="">
-                <p id="date-output"></p><br>
+            <div id="text-block-3">
+                <p id="date-output">28 January 2023</p>
                 <p id="prefilled-text-3">at</p>
-                <p id="time-output"></p>
+                <p id="time-output">5:30 pm</p>
             </div>
 
-            <div id="text-block-4" class="">
-                <p id="location-output"></p>
+            <div id="text-block-4">
+                <p>at</p>
+                <p id="location-output">Ripponlea Estate, Elsternwick</p>
             </div>
 
             <div id="text-block-5">
-                <p id="reception-output"></p>
+                <p id="reception-output">Reception to follow</p>
             </div>
             
-            <div id="text-block-6" class="">
+            <div id="text-block-6">
                 <p id="prefilled-text-4">RSVP by</p>
-                <p id="rsvp-output"></p>
-            </div>    
+                <p id="rsvp-output">31 October 2022 via rsvp@ourwedding.com</p>
+            </div>
+    
         </div> 
         
         <footer></footer>

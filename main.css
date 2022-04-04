@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .wrapper {
@@ -35,12 +36,11 @@ body {
     "footer footer footer";
 }
 
-
 /*grid areas*/
 
 #header {
     grid-area: header;
-    margin: 2rem;
+    margin: 1.5rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -84,17 +84,22 @@ body {
     grid-area: design-3-btns;
 }
 
+footer {
+    grid-area: footer;
+}
+
 #design-1 img,
 #design-2 img,
 #design-3 img {
     width:50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #form {
     grid-area: form;
     justify-items: center;
     align-items: center;
-    margin: 1rem;
+    margin: 0;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -137,50 +142,11 @@ body {
     margin-left: 9.3rem;
 }
 
-/*end design 1 font and text layout*/
-
-/*desing 2 font and text layout
-
-.design-2-text #text-block-1 {
-    display:hidden;
-    margin: '5.4rem 7.5rem 0 8.4rem';
-    font-size: '1.25 rem';  
-}
-
-.design-2-text #text-block-2,
-.design-2-text #text-block-5 {
-    display: hidden;
-    text-align: left;
-    margin: '.4rem 7.5rem 0 8.43rem';
-    font-size: .7rem;
-    font-style: italic;
-}
-
-.design-2-text #text-block-3,
-.design-2-text #text-block-4 {
-    display: hidden;
-    margin: .4rem 7.5rem 0 8.43rem;
-}
-
-.design-2-text #text-block-6  {
-    display: hidden;
-    margin: .4rem 7.5rem 0 8.43rem;
-    text-align: 'left';
-    position: 'initial';
-    font-size: .6rem;
-    font-style: italic;
-}
-*/
-
-footer {
-    grid-area: footer;
+#date-output {
+    display: inline;
 }
 
 /*header*/
-span {
-    padding: 0 2.5rem 0 2.5rem;
-}
-
 h1 {
     display: inline;
     margin: .4rem;
@@ -206,6 +172,28 @@ h2 {
 }
 
 /*button styling*/
+
+#submit-btn, 
+#reset-btn {
+    display: inline;
+    background-color: white;
+    text-align: center;
+    height: 1.8rem;
+    width: fit-content;
+    border: none;
+    border-radius: 8%;
+    margin: 0; /*1.5rem auto;*/
+    font-size: 1rem;
+    font-family: 'raleway', helvetica, sans-serif;
+}
+
+#submit-btn:hover, 
+#reset-btn:hover {
+    border-radius: 4px;
+    border: 2px solid;
+    font-style: bold;
+}
+
 button {
     height:10px;
     width: 10px;
@@ -246,15 +234,36 @@ button {
 
 /*form input styling*/
 
-input[type='text'] {
+.form-control {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: .2rem; 
+}
+
+label {
+    visibility: hidden;
+    font-size: 1px;
+}
+
+.form-control input {
     width: 80%;
-    margin: .2rem;
-    padding: .3rem;
+    margin: auto; /*.15rem;*/
+    padding: .2rem; /*.3rem;*/
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid;
     border-left-style: none;
     font-size: 1rem;
+    display: block;
+    position: relative;
+}
+
+.form-control.success input {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-color: #85DBB2;
 }
 
 ::placeholder {
@@ -262,10 +271,26 @@ input[type='text'] {
     color: rgb(145, 143, 143);
 }
 
-label {
-    visibility: hidden;
+.form-control.error input {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-color: #EF3939;
 }
 
+small {
+    visibility: hidden;
+    font-size: .7rem;
+    position: absolute;
+    bottom: 0;
+    right: 10%;  
+}
+
+.form-control.error small {
+    color:#EF3939;
+    visibility: visible;
+}
 
 /*invite images*/
 
@@ -285,7 +310,6 @@ label {
     background-position: center;
     border-radius: 8px;
     font-family: 'Cormorant Garamond', serif;
-    
 }
 
 .invite-option-3 {
@@ -294,9 +318,7 @@ label {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
-    font-family: 'Rufina', serif;
-    
-    
+    font-family: 'Rufina', serif;  
 }
 
 .invite-option-4 {
@@ -330,6 +352,7 @@ label {
 @media only screen and (max-width: 800px) {
 .wrapper {
     width: 90%;
+    max-height:none;
     margin: .2rem auto;
     padding: .5rem;
     background-color: white;
@@ -390,70 +413,12 @@ h2 {
 @media only screen and (min-width: 1300px) {
     body {
         background-color:#F9F4EC;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        box-sizing: content-box;
+        margin: 5%;
     }
     .wrapper {
-        width: 87.5rem;
-        max-height: 100vh;
-        padding: 5rem .5rem 5rem .5rem;
+        width: 1000px;
+        max-height: 649px;
         background-color: white;
-        grid-template-columns: 1.3fr .4fr 1.3fr;
-        grid-template-rows: .5fr .3fr .6fr .4fr .1fr .4fr .1fr .4fr .1fr .6fr .5fr;
-        grid-template-areas: 
-        "header header header"
-        "sub-head-1 . sub-head-2"
-        "form . preview"
-        "form design-1 preview"
-        "form design-1-btns preview"
-        "form design-2 preview"
-        "form design-2-btns preview"
-        "form design-3 preview"
-        "form design-3-btns preview"
-        "form . preview"
-        "footer footer footer";
     }
-
-    #header {
-        margin: 2rem;
-    }
-
-    h2 {
-        margin: .2rem;
-        font-size: 1.5rem;
-    }
-
-    input[type='text'] {
-        margin: 1.5rem .2rem 1.5rem .2rem;
-    }
-
-    .invite-option-1 {
-        background-size: 80%; 
-    }
-    
-    .invite-option-2 {
-        background-size: 80%;
-    }
-    
-    .invite-option-3 {
-        background-size: 80%;
-    }
-    
-    .invite-option-4 {
-        background-size: 80%;
-    }
-    
-    .invite-option-5 {
-        background-size: 80%;
-    }
-    
-    .invite-option-6 {
-        background-size: 80%;
-    }
-
-   /* div #invite-text {
-        width: 451px;
-        height: 648px;
-    }*/
 }
-
