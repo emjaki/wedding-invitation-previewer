@@ -1,63 +1,102 @@
-//change colourway for each design
+//change colourway design 1 options
 
-function option(prm) {
+const design1Btns = document.querySelector('#design-1-btns');
+
+design1Btns.addEventListener('click', design1Select, false);
+
+function design1Select(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
+
     let optionOne = document.getElementById("option-1");
     let optionTwo = document.getElementById("option-2");
-    let optionThree = document.getElementById("option-3");
-    let optionFour = document.getElementById("option-4");
-    let optionFive = document.getElementById("option-5");
-    let optionSix = document.getElementById("option-6");
 
-    if (prm == 'option-1') {
+    if (clickedItem == 'simple-heart-1') {
         optionOne.style.display = "block";
         optionOne.style.marginLeft = "auto";
         optionOne.style.marginRight = "auto";
         optionTwo.style.display = "none";
-    }
+    };
 
-    if (prm == 'option-2') {
+    if (clickedItem == 'simple-heart-2') {
         optionOne.style.display = "none";
         optionTwo.style.display = "block";
         optionTwo.style.marginLeft = "auto";
         optionTwo.style.marginRight = "auto";
-    }
+    };
+    e.stopPropagation();
+}}
 
-    if (prm == 'option-3') {
+//change colourway design 2 options
+
+const design2Btns = document.querySelector('#design-2-btns');
+
+design2Btns.addEventListener('click', design2Select, false);
+
+function design2Select(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
+
+    let optionThree = document.getElementById("option-3");
+    let optionFour = document.getElementById("option-4");
+    
+
+    if (clickedItem == 'bauhaus-heart-1') {
         optionThree.style.display = "block";
         optionThree.style.marginLeft = "auto";
         optionThree.style.marginRight = "auto";
         optionFour.style.display = "none";
-    }
+    };
 
-    if (prm == 'option-4') {
+    if (clickedItem == 'bauhaus-heart-2') {
         optionThree.style.display = "none";
         optionFour.style.display = "block";
         optionFour.style.marginLeft = "auto";
         optionFour.style.marginRight = "auto";
-    }
+    };
+    e.stopPropagation();
+}}
 
-    if (prm == 'option-5') {
+//change colourway design 3 options
+const design3Btns = document.querySelector('#design-3-btns');
+
+design3Btns.addEventListener('click', design3Select, false);
+
+function design3Select(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
+
+    let optionFive = document.getElementById("option-5");
+    let optionSix = document.getElementById("option-6");
+
+    if (clickedItem == 'rainbow-heart-1') {
         optionFive.style.display = "block";
         optionFive.style.marginLeft = "auto";
         optionFive.style.marginRight = "auto";
         optionSix.style.display = "none";
-    }
+    };
 
-    if (prm == 'option-6') {
+    if (clickedItem == 'rainbow-heart-2') {
         optionFive.style.display = "none";
         optionSix.style.display = "block";
         optionSix.style.marginLeft = "auto";
         optionSix.style.marginRight = "auto";
-    }
-}
+    };
+    e.stopPropagation();
+}}
 
-//change preview image when thumbnail image clicked
+//change background image in Preview section
 
-function showPreview(prm) {
+const design1Preview = document.querySelector('#design-1');
+design1Preview.addEventListener('click', showPreviewDesign1, false);
+
+function showPreviewDesign1(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
 
     let previewWrapper = document.getElementById('preview-wrapper');
 
-    if (prm == 'option-1') {
+    if (clickedItem == 'option-1') {
         previewWrapper.classList.add('invite-option-1');
 
         previewWrapper.classList.remove('invite-option-2');
@@ -65,9 +104,9 @@ function showPreview(prm) {
         previewWrapper.classList.remove('invite-option-4');
         previewWrapper.classList.remove('invite-option-5');
         previewWrapper.classList.remove('invite-option-6');
-    } 
+    }
 
-    if (prm == 'option-2') {
+    if (clickedItem == 'option-2') {
         previewWrapper.classList.add('invite-option-2');
 
         previewWrapper.classList.remove('invite-option-1');
@@ -76,18 +115,29 @@ function showPreview(prm) {
         previewWrapper.classList.remove('invite-option-5');
         previewWrapper.classList.remove('invite-option-6');
     } 
+    e.stopPropagation();
+}}
 
-    if (prm == 'option-3') {
+const design2Preview = document.querySelector('#design-2');
+design2Preview.addEventListener('click', showPreviewDesign2, false);
+
+function showPreviewDesign2(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
+
+    let previewWrapper = document.getElementById('preview-wrapper');
+
+    if (clickedItem == 'option-3') {
         previewWrapper.classList.add('invite-option-3');
 
         previewWrapper.classList.remove('invite-option-1');
         previewWrapper.classList.remove('invite-option-2');
         previewWrapper.classList.remove('invite-option-4');
         previewWrapper.classList.remove('invite-option-5');
-        previewWrapper.classList.remove('invite-option-6');  
-    } 
+        previewWrapper.classList.remove('invite-option-6'); 
+    }
 
-    if (prm == 'option-4') {
+    if (clickedItem == 'option-4') {
         previewWrapper.classList.add('invite-option-4');
 
         previewWrapper.classList.remove('invite-option-1');
@@ -96,8 +146,19 @@ function showPreview(prm) {
         previewWrapper.classList.remove('invite-option-5');
         previewWrapper.classList.remove('invite-option-6');
     } 
+    e.stopPropagation();
+}}
 
-    if (prm == 'option-5') {
+const design3Preview = document.querySelector('#design-3');
+design3Preview.addEventListener('click', showPreviewDesign3, false);
+
+function showPreviewDesign3(e) {
+if (e.target !== e.currentTarget) {
+    clickedItem = e.target.id;
+
+    let previewWrapper = document.getElementById('preview-wrapper');
+
+    if (clickedItem == 'option-5') {
         previewWrapper.classList.add('invite-option-5');
 
         previewWrapper.classList.remove('invite-option-1');
@@ -105,9 +166,9 @@ function showPreview(prm) {
         previewWrapper.classList.remove('invite-option-3');
         previewWrapper.classList.remove('invite-option-4');
         previewWrapper.classList.remove('invite-option-6');
-    } 
+    }
 
-    if (prm == 'option-6') {
+    if (clickedItem == 'option-6') {
         previewWrapper.classList.add('invite-option-6');
 
         previewWrapper.classList.remove('invite-option-1');
@@ -115,8 +176,9 @@ function showPreview(prm) {
         previewWrapper.classList.remove('invite-option-3');
         previewWrapper.classList.remove('invite-option-4');
         previewWrapper.classList.remove('invite-option-5');
-    }
-}
+    } 
+    e.stopPropagation();
+}}
 
 //change font and text layout for simple heart design (option 1 and 2)
 
@@ -216,7 +278,7 @@ if (e.target !== e.currentTarget) {
     e.stopPropagation();
 }
 
-//change font and text for rainbow heart design (options 5 and 6)
+//change font and text layout for rainbow heart design (options 5 and 6)
 
 const designThreeFonts = document.querySelector('#design-3');
 
@@ -235,7 +297,7 @@ if (e.target !== e.currentTarget) {
     let textBlock5 = document.getElementById('text-block-5');
     let textBlock6 = document.getElementById('text-block-6');
 
-        textBlock1.style.margin = '2.25rem 5.5rem 0 5.5rem';
+        textBlock1.style.margin = '2.52rem 5.5rem 0 5.5rem';
         textBlock1.style.fontSize = '1.2rem';
 
         textBlock2.style.margin = '.05rem 5.5rem 0 5.5rem';
@@ -272,6 +334,7 @@ if (e.target !== e.currentTarget) {
 function livePrintP1() {
     let nameP1 = document.getElementById('nameP1').value;
     let name1Output = document.getElementById('name-1-output');
+   
     return name1Output.textContent = `${nameP1}`;
 }
 
@@ -295,7 +358,7 @@ function livePrintDate() {
 }
 
 function livePrintLocation() {
-    let location = document.getElementById('location').value;
+    let location = document.getElementById('location-input').value;
 
     let locationOutput = document.getElementById('location-output');
     return locationOutput.textContent = `${location}`;
@@ -317,14 +380,16 @@ function livePrintRsvp() {
 
 //form notifications
 
-const exportDesign = document.getElementById('export-btn');
-const nameP1 = document.getElementById('nameP1');
-const nameP2 = document.getElementById('nameP2');
-const date = document.getElementById('date');
-const time = document.getElementById('time');
-const location = document.getElementById('location');
-const reception = document.getElementById('reception');
-const rsvp = document.getElementById('rsvp');
+let exportDesign = document.getElementById('submit-btn');
+let nameP1 = document.getElementById('nameP1');
+let nameP2 = document.getElementById('nameP2');
+let date = document.getElementById('date');
+let time = document.getElementById('time');
+let locationInput = document.getElementById('location-input');
+let reception = document.getElementById('reception');
+let rsvp = document.getElementById('rsvp');
+let formControl = document.getElementsByClassName('form-control')
+let success = form.getElementsByClassName('success')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -337,29 +402,67 @@ function checkInputs() {
     const nameP2Value = nameP2.value.trim();
     const dateValue = date.value.trim();
     const timeValue = time.value.trim();
-    const locationValue = location.value.trim();
+    const locationInputValue = locationInput.value.trim();
     const receptionValue = reception.value.trim();
     const rsvpValue = rsvp.value.trim();
 
-    if (nameP1Value == "" /*|| nameP1Value.length > 22*/) {
-        //show error
-        //add error class
-        setErrorFor(nameP1, 'Please fill in this field (1-22 characters)');
+    if (nameP1Value == "") {
+        setErrorFor(nameP1, 'Please fill in this field');
     } else {
-        setSuccessFor(nameP1);
+       setSuccessFor(nameP1);
+    }
+
+    if (nameP2Value == "") {
+        setErrorFor(nameP2, 'Please fill in this field');
+    } else {
+       setSuccessFor(nameP2);
+    }
+
+    if (dateValue == "") {
+        setErrorFor(date, 'Please fill in this field');
+    } else {
+        setSuccessFor(date);
+    }
+
+    if (timeValue == "") {
+        setErrorFor(time, 'Please fill in this field');
+    } else {
+        setSuccessFor(time);
+    }
+
+    if (locationInputValue == "") { 
+        setErrorFor(locationInput, 'Please fill in this field');
+    } else {
+        setSuccessFor(locationInput);
+    }
+
+    if (receptionValue == "") {
+        setErrorFor(reception, 'Please fill in this field');
+    } else {
+        setSuccessFor(reception);
+    }
+
+    if (rsvpValue == "") {
+        setErrorFor(rsvp, 'Please fill in this field');
+    } else {
+        setSuccessFor(rsvp);
+    }
+
+    if (success.length == 7) {
+        alert('Thank you for using the Wedding Invitation Planner!\nYour design has been submitted successfully.');
     }
 }
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
-    const small = formControl.querySelecter('small');
+    const small = formControl.querySelector('small');
 
     small.innerText = message;
     formControl.className = 'form-control error';
 }
 
 function setSuccessFor(input) {
+
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 }
-      

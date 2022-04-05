@@ -25,43 +25,43 @@
 
                 <div class="form-control">
                     <label for="nameP1">Name (Person 1)</label><br>
-                    <input type="text" id="nameP1" placeholder="Name (Person 1)" onkeyup="livePrintP1()" class="">
+                    <input type="text" id="nameP1" placeholder="Name (Person 1)" onkeyup="livePrintP1()" maxlength="23" class="">
                     <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
                     <label for="nameP2">Name (Person 2)</label><br>
-                    <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()" class="input">
+                    <input type="text" id="nameP2" placeholder="Name (Person 2)" onkeyup="livePrintP2()" maxlength="22">
                     <small class="small">Error message</small>
                 </div>
 
                 <div class="form-control">
                     <label for="date">Event date</label><br>
-                    <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()">
+                    <input type="text" id="date" placeholder="Event date" onkeyup="livePrintDate()" maxlength="22">
                     <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
                     <label for="time">Event time</label><br>
-                    <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()">
+                    <input type="text" id="time" placeholder="Event time" onkeyup="livePrintTime()" maxlength="22">
                     <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
-                    <label for="location">Location</label><br>
-                    <input type="text" id="location" placeholder="Location" onkeyup="livePrintLocation()">
+                    <label for="location-input">Location</label><br>
+                    <input type="text" id="location-input" placeholder="Location" onkeyup="livePrintLocation()" maxlength="80">
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control">
                     <label for="reception">Reception details</label><br>
-                    <input type="text" id="reception" placeholder = "Reception" onkeyup="livePrintReception()">
+                    <input type="text" id="reception" placeholder = "Reception" onkeyup="livePrintReception()" maxlength="80">
                     <small>Error message</small>
                 </div>
             
                 <div class="form-control">
                     <label for="rsvp">RSVP</label><br>
-                    <input type="text" id="rsvp" placeholder = "RSVP details" onkeyup="livePrintRsvp()">
+                    <input type="text" id="rsvp" placeholder = "RSVP details" onkeyup="livePrintRsvp()" maxlength="58">
                     <small>Error message</small>
                  </div>
 
@@ -69,7 +69,6 @@
 
                 <button type="submit" id="submit-btn">SUBMIT</button>
 
-            
             </form> 
         </div>
 
@@ -78,41 +77,37 @@
         </div>
         
             <div id="design-1">
-                <img src="images-thumbnail/image 4fullHeart.png" alt="red-filled heart placed on antique-white background" id="option-1" onclick="showPreview('option-1')"/>
+                <img src="images-thumbnail/simpleHeartOp1Thumb.png" alt="red-filled heart placed on antique-white background" id="option-1"/>
 
-                <img src="images-thumbnail/Group 13outlineHeart.png" alt="red outline of a heart against antique white background" id="option-2" onclick="showPreview('option-2')"/>
+                <img src="images-thumbnail/simpleHeartOp2Thumb.png" alt="red outline of a heart against antique white background" id="option-2"/>
             </div>
 
             <div id="design-1-btns">
-                <button class="simple-heart-1" onclick="option('option-1')"></button>
-                <button class="simple-heart-2" onclick="option('option-2')"></button> 
+                <button id="simple-heart-1"></button>
+                <button id="simple-heart-2"></button> 
             </div>
 
             <div id="design-2">
-                <img src="images-thumbnail/Frame 10frameWithHeart.png" alt="bold black border on left and bottom margin, small red-filled heart in bottom-right corner. Antique white background." id="option-3" onclick="showPreview('option-3')"/>
+                <img src="images-thumbnail/bauhausHeartOp3Thumb.png" alt="bold black border on left and bottom margin, small red-filled heart in bottom-right corner. Antique white background." id="option-3"/>
 
-                <img src="images-thumbnail/Group 14redFrameHeart.png" alt="bold red border on left and bottom margin, small black-filled heart in bottom right corner. Antique white background." id="option-4" onclick="showPreview('option-4')"/>
+                <img src="images-thumbnail/bauhausHeartOp4Thumb.png" alt="bold red border on left and bottom margin, small black-filled heart in bottom right corner. Antique white background." id="option-4"/>
             </div>
 
             <div id="design-2-btns">
-                <label for="bauhaus-heart-1" onclick="showPreviewOp3"></label>
-                <button class="bauhaus-heart-1" onclick = "option('option-3')"></button>
-                <label for="bauhaus-heart-2"></label>
-                <button class="bauhaus-heart-2" onclick = "option('option-4')"></button>
+                <button id="bauhaus-heart-1"></button>
+                <button id="bauhaus-heart-2"></button>
             </div>
 
             <div id="design-3">
-                <img src="images-thumbnail/rainbowHeart-thumbnail-1.png" alt="striped rainbow background with orange outlined heart overlaying colour block" id="option-5" onclick="showPreview('option-5')"/>
+                <img src="images-thumbnail/rainbowHeartOp5Thumb.png" alt="striped rainbow background with orange outlined heart overlaying colour block" id="option-5"/>
 
-                <img src="images-thumbnail/Frame 9pinkStripesHeart.png" alt="striped pink gradient bakcground with red outlined heart overlaying colour block" id="option-6" onclick="showPreview('option-6')"/>
+                <img src="images-thumbnail/rainbowHeartOp6Thumb.png" alt="striped pink gradient bakcground with red outlined heart overlaying colour block" id="option-6"/>
             </div>
 
             <div id="design-3-btns">
-                <button class="rainbow-heart-1" onclick = "option('option-5')"></button>
-                <button class="rainbow-heart-2" onclick = "option('option-6')"></button>
+                <button id="rainbow-heart-1"></button>
+                <button id="rainbow-heart-2"></button>
             </div>
-
-        <div id="empty"></div>
 
         <div id="preview-wrapper" class="invite-option-1">
 
@@ -150,6 +145,6 @@
         
         <footer></footer>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

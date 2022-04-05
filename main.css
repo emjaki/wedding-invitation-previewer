@@ -55,6 +55,14 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#form {
+    grid-area: form;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
 #design-1 {
     grid-area: design-1;
 }
@@ -88,6 +96,20 @@ footer {
     grid-area: footer;
 }
 
+/*headings*/
+
+h1 {
+    display: inline;
+    margin: .4rem;
+}
+
+h2 {
+    margin: .2rem .2rem .5rem .2rem;
+    font-size: 1.3rem;
+}
+
+/*design option thumbnails*/
+
 #design-1 img,
 #design-2 img,
 #design-3 img {
@@ -95,15 +117,20 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-#form {
-    grid-area: form;
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
+#option-2,
+#option-4,
+#option-6 {
+   display: none;
+}
+
+#design-1 img:hover, 
+#design-2 img:hover, 
+#design-3 img:hover {
+   transform: scale(1.1);
 }
 
 /*design 1 font styles and layout*/
+
 #text-block-1 {
     text-align: left;
     margin-top: 3.1rem; 
@@ -146,32 +173,7 @@ footer {
     display: inline;
 }
 
-/*header*/
-h1 {
-    display: inline;
-    margin: .4rem;
-}
-
-/*remaining content*/
-
-h2 {
-    margin: .2rem .2rem .5rem .2rem;
-    font-size: 1.3rem;
-}
-
-#option-2,
-#option-4,
-#option-6 {
-   display: none;
-}
-
-#design-1 img:hover, 
-#design-2 img:hover, 
-#design-3 img:hover {
-   transform: scale(1.1);
-}
-
-/*button styling*/
+/*buttons*/
 
 #submit-btn, 
 #reset-btn {
@@ -182,7 +184,7 @@ h2 {
     width: fit-content;
     border: none;
     border-radius: 8%;
-    margin: 0; /*1.5rem auto;*/
+    margin: 0;
     font-size: 1rem;
     font-family: 'raleway', helvetica, sans-serif;
 }
@@ -190,8 +192,7 @@ h2 {
 #submit-btn:hover, 
 #reset-btn:hover {
     border-radius: 4px;
-    border: 2px solid;
-    font-style: bold;
+    border: 1px solid;
 }
 
 button {
@@ -202,32 +203,32 @@ button {
     margin: .5rem 0 .5rem 0;
 }
 
-.simple-heart-1 {
+#simple-heart-1 {
     background-color: #EF3939;
     border: 1px #EF3939 solid;
 }
 
-.simple-heart-2 {
+#simple-heart-2 {
     background-color: #F9F4EC;
     border: 1px #EF3939 solid;
 }
 
-.bauhaus-heart-1 {
+#bauhaus-heart-1 {
     background-color: #EF3939;
     border: 1px black solid;
 }
 
-.bauhaus-heart-2 {
+#bauhaus-heart-2 {
     background-color: black;
     border: 1px #EF3939 solid;
 }
 
-.rainbow-heart-1 {
+#rainbow-heart-1 {
     background: linear-gradient(180deg, rgba(255, 186, 186, 0.8) 0%, #C292FF 100%);
     border: 0.395458px solid #000000;
 }
 
-.rainbow-heart-2 {
+#rainbow-heart-2 {
     background: linear-gradient(180deg, #F8B363 0%, #FFBABA 100%);
     border: 0.395458px solid #EF3939;
 }
@@ -263,7 +264,7 @@ label {
     border-right-style: none;
     border-bottom-style: solid;
     border-left-style: none;
-    border-color: #85DBB2;
+    border-color: black;
 }
 
 ::placeholder {
@@ -295,7 +296,7 @@ small {
 /*invite images*/
 
 .invite-option-1 {
-    background-image: url('images-main/Frame 1fullHeart.png');
+    background-image: url('images-main/simpleHeartOp1Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -304,7 +305,7 @@ small {
 }
 
 .invite-option-2 {
-    background-image: url('images-main/Group 12outlineHeart.png');
+    background-image: url('images-main/simpleHeartOp2Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -313,7 +314,7 @@ small {
 }
 
 .invite-option-3 {
-    background-image: url('images-main/Frame 2bauhausHeartRed.png');
+    background-image: url('images-main/bauhausHeartOp3Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -322,7 +323,7 @@ small {
 }
 
 .invite-option-4 {
-    background-image: url('images-main/Frame 5bauhausHeartBlack.png');
+    background-image: url('images-main/bauhausHeartOp4Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -331,7 +332,7 @@ small {
 }
 
 .invite-option-5 {
-    background-image: url('images-main/Frame 3rainbowHeart.png');
+    background-image: url('images-main/rainbowHeartOp5Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -340,7 +341,7 @@ small {
 }
 
 .invite-option-6 {
-    background-image: url('images-main/Frame 6pinkGradientHeart.png');
+    background-image: url('images-main/rainbowHeartOp6Bg.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
